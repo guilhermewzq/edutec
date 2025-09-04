@@ -108,6 +108,10 @@ h1.destaque {
   align-items: center;
   transition: transform 0.3s ease;
   padding: 0 60px;
+  justify-content: center;   /* centraliza os cards *
+  gap: 10px;                 /* distância entre os cards */
+  padding: 0 60px;           /* distância das bordas laterais */
+  margin: 100px 0;           /* distância em cima e embaixo */
 }
 
 .card {
@@ -123,7 +127,7 @@ h1.destaque {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px rgba(124, 103, 77, 0.226); /* sombra escura */
+  box-shadow: 0 8px 16px rgba(124, 103, 77, 0.336); /* sombra escura */
   transform: translateY(-10px); /* levanta no hover */
 }
 
@@ -176,7 +180,6 @@ h1.destaque {
   font-size: 128px;
   border-top-left-radius: 40%;
   /* margin: 20px 700px; */
-  
   font-weight: 300;
   margin-left: 40px 20px;
 }
