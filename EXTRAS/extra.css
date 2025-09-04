@@ -1,0 +1,398 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #DBD7C5; /* Fundo bege claro */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+
+  header{
+      position: relative;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+      color: white;
+      background-color: #111;
+      background-image: url('./fundo/SATURNO-ZOOM_LE_upscale_balanced_x4\ 2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 15rem;
+      box-sizing: border-box;
+    }
+    
+    /* Logo - canto esquerdo */
+    header .logo {
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+    }
+    
+    header .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      object-fit: cover;
+    }
+    
+    header .menu {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+    }
+    
+    header .menu img {
+      width: 28px;
+      height: 28px;
+      opacity: 0.9;
+    }
+
+    header hr {
+      border: none;
+      border-top: 1px solid #000;
+      margin: 60px auto 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    header h2 {
+      font-size: 2.8rem;
+      font-style: italic;
+      font-weight: 400;
+      text-align: center;
+      color: #f8f8f8;
+      margin: 1rem 0 0.5rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ddd;
+      text-align: center;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+  h2 {
+    font-size: 24px;
+    margin: 40px 0 10px 0;
+    color: #222;
+  }
+  
+  hr {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+  }
+  
+  /* --- SEÇÃO VÍDEOS --- */
+  .videos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .video-card {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .video-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .video-thumbnail {
+    width: 200px;
+    height: 150px;
+    background-color: #757575;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+  
+  .play-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .play-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .video-content {
+    flex: 1;
+    padding: 15px;
+  }
+  
+  .video-content h3 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .video-content p {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 10px 0;
+  }
+  
+  .video-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .video-content ul li {
+    font-size: 13px;
+    color: #555;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .video-content ul li::before {
+    content: "✓";
+    color: #4CAF50;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  
+  .link-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #757575;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .link-btn:hover {
+    background-color: #5d5d5d;
+  }
+  
+  /* --- SEÇÃO LIVROS --- */
+  .livros {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  .livros .card {
+    display: flex;
+    gap: 15px;
+    background: #DBD7C5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .livros img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin: 15px;
+    border-radius: 6px;
+  }
+  
+  .card-content {
+    padding: 15px;
+    flex: 1;
+  }
+  
+  .card-content .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+  }
+  
+  .card-content .card-author {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 10px 0;
+  }
+  
+  .card-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .card-list li {
+    font-size: 13px;
+    color: #555;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-list li::before {
+    content: "✓";
+    color: #4CAF50;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  
+  .contact-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #757575;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-btn:hover {
+    background-color: #5d5d5d;
+  }
+  
+  /* --- SEÇÃO SITES --- */
+  .sites {
+    padding: 20px;
+  background-color: #DBD7C5;
+  }
+  
+    .sites-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto; /* 2 linhas */
+      gap: 20px;
+      margin-top: 20px;
+    }
+  
+
+  .site-card {
+    background: #DBD7C5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+
+  .site-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .site-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .site-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .site-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    padding: 0 15px 15px;
+    line-height: 1.5;
+  }
+
+
+  .quadro {
+    background: #DBD7C5;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .quadro:hover {
+    transform: translateY(-5px);
+  }
+  
+  .quadro h3 {
+    font-size: 16px;
+    margin: 10px 0 8px 0;
+    color: #333;
+  }
+  
+  .quadro p {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+  }
+  
+  .access-btn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: #757575;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .access-btn:hover {
+    background-color: #5d5d5d;
+  }
+  
+  /* Botão de voltar ao topo */
+  .back-to-top {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .back-to-top button {
+    padding: 10px 20px;
+    background-color: #4B4845;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .back-to-top button:hover {
+    background-color: #4B4845;
+  }
