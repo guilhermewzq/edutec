@@ -4,8 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reações no Espaço</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./FOTOS NEWS/image.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
 </head>
 <body class="page-reacoes">
   <!-- Navbar -->
@@ -22,13 +38,14 @@
 
   <div class="hamburger-menu">
     <ul class="menu-items">
-      <li><a href="../NEWS/index.html">NOTICIAS</a></li>
-      <li><a href="../ELEMENTS/index.html">ELEMENTOS</a></li>
-      <li><a href="../REACTIONS/index.html">REACOES</a></li>
-      <li><a href="../TIMELINE/index.html">TIME-LINE</a></li>
-      <li><a href="../HOME/index.html">HOME</a></li>
-      <li><a href="../EXTRAS/index.html">EXTRAS</a></li>
-      <li><a href="../PLANETS/mercurio.html">PLANETS</a></li>
+      <li><a href="../NEWS/index.html">NOTÍCIAS</a></li>
+          <li><a href="../ELEMENTS/index.html">ELEMENTOS</a></li>
+          <li><a href="../REACTIONS/index.html">REAÇÕES</a></li>
+          <li><a href="../TIMELINE/index.html">TIME-LINE</a></li>
+          <li><a href="../PLANETS/jupiter.html">PLANETAS</a></li>
+          <li><a href="../QUIZ-PAGINA-INICIAL/index.html">QUIZ</a></li>
+          <li><a href="../EXTRAS/index.html">CONTEÚDOS</a></li>
+          <li><a href="../SIGN-UP/index.html">SIGN-UP</a></li>
     </ul>
   </div>
 </nav>
@@ -72,7 +89,7 @@
       Segredos Químicos da Terra e dos Cosmos
     </h3>
     <p class="lovelock-paragraph">
-      Astrofísico britânico que explicou como os elementos químicos se formam no interior das estrelas. 
+      James Lovelock, astrofísico britânico que explicou como os elementos químicos se formam no interior das estrelas. 
       Mostrou que a fusão de núcleos cria elementos mais pesados, como o carbono e o ferro. 
       Sua teoria da nucleossíntese estelar ajudou a entender a origem dos átomos no universo. 
       Foi pioneiro na conexão entre física nuclear e astroquímica.
@@ -200,7 +217,7 @@ Essas descobertas e desafios mostram como a química do cosmos é essencial para
   document.addEventListener('click', (e) => {
     if (!hamburgerMenu.contains(e.target) && !menuToggle.contains(e.target)) {
       hamburgerMenu.classList.remove('open');
-    }
+    }document
   });
 
       const backToTop = document.querySelector('.back-to-top');

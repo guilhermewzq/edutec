@@ -3,56 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ChemCosmo – A Ciência do Espaço</title>
-  <link rel="stylesheet" href="home.css" />
+  <link rel="icon" type="image/png" href="/NEWS/FOTOS NEWS/image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <title>ChemCosmo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
 
-  <header class="header">
-    <div class="logo">
-      <img src="./fundo/logo/Captura de tela 2025-08-14 144531.png" alt="">
-    </div>
-    <button class="menu-toggle">☰</button>
-  </header>
-
+  
   <section class="hero">
+    
+    <div class="logo">
+      <img src="/NEWS/FOTOS NEWS/image.png" alt="Logo">
+    </div>
+    <hr>
+
+    
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="hamburger-menu">
+      <ul class="menu-items">
+        <li><a href="../NEWS/index.html">NOTÍCIAS</a></li>
+          <li><a href="../ELEMENTS/index.html">ELEMENTOS</a></li>
+          <li><a href="../REACTIONS/index.html">REAÇÕES</a></li>
+          <li><a href="../TIMELINE/index.html">TIME-LINE</a></li>
+          <li><a href="../PLANETS/jupiter.html">PLANETAS</a></li>
+          <li><a href="../QUIZ-PAGINA-INICIAL/index.html">QUIZ</a></li>
+          <li><a href="../EXTRAS/index.html">CONTEÚDOS</a></li>
+          <li><a href="../SIGN-UP/index.html">SIGN-UP</a></li>
+      </ul>
+    </div>
+
+    
     <div class="hero-content">
       <h1>A ciência do espaço, ao alcance da mente.</h1>
-      <p>DESVENTANDO OS SEGREDO DO UNIVERSO, MOLÉCULA POR MOLÉCULA.</p>
-      <div class="scroll-indicator">
-        <p>DESLIZE PARA BAIXO PARA CONTINUAR</p>
-        <div class="arrow">↓</div>
+      <p>Desvendando os segredos do universo, molécula por molécula.</p>
+      <p class="scroll-hint">Role Para Baixo Para Continuar</p>
+    </div>
+  </section>
+
+  
+  <section class="content-section">
+    <div class="content-wrapper">
+
+      <h2>Descubra as maravilhas além da imaginação: as estrelas, o tempo e tudo o que há entre eles.</h2>
+
+
+      <div class="star-icon">
+        <img src="./imagens/estrsea 12 (1).jpg" alt="">
       </div>
-    </div>
-  </section>
+      <p>Como a matéria do Universo se transformou em vida? Explore essa pergunta no projeto ChemCosmo: a jornada da astroquímica.</p>
 
-  <section class="space-scene">
-    <img src="" alt="Saturno com anéis" class="saturn" />
-    <img src="" alt="Terra vista do espaço" class="earth" />
+      <div class="star-icon">
+        <img src="./imagens/estrsea 12 (1).jpg" alt="">
+      </div>
+      <p>Viaje por paisagens cósmicas impressionantes, da formação das estrelas até a origem dos elementos químicos que formam os planetas, a Terra... e você. Tudo isso em uma exploração interativa e envolvente.</p>
 
-    <div class="text-block">
-      <h2>DESCUBRA AS MARAVILHAS ALÉM DA IMAGINAÇÃO:<br />AS ESTRELAS, O TEMPO E TUDO O QUE HÁ ENTRE ELES.</h2>
-    </div>
-
-    <div class="content-section">
-      <div class="icon">Cu</div>
-      <p>Como a matéria do Universo se transformou em vida?<br />Explore essa pergunta no projeto ChemCosmo: a jornada da astroquímica.</p>
-    </div>
-
-    <div class="content-section">
-      <div class="icon">✨</div>
-      <p>Viaje por paisagens cósmicas impressionantes, da formação das estrelas até a origem dos elementos químicos que formam os planetas, a Terra... e você.<br />Tudo isso em uma exploração interativa e envolvente.</p>
-    </div>
-
-    <div class="content-section">
-      <div class="icon">✨</div>
+      <div class="star-icon">
+        <img src="./imagens/estrsea 12 (1).jpg" alt="">
+      </div>
       <p>Continue sua jornada pelo Universo com o app interativo do projeto Emergence, cheio de curiosidades, animações e experiências sobre astroquímica e evolução cósmica.</p>
+
+      <a href="../PLANETS/mercurio.html"><button>SISTEMA SOLAR</button></a>
+     
     </div>
+
+    <img src="./imagens/TERRA-PRETA_LE_upscale_balanced_remove_background_general_clip_to_object_off 1 (2)-Photoroom.png" alt="" class="lastImage">
   </section>
 
-  <div class="solar-system-container">
-    <button class="solar-system-btn">SISTEMA SOLAR</button>
-  </div>
+  <!-- SCRIPTS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const hamburgerMenu = document.querySelector('.hamburger-menu');
+      const menuLinks = document.querySelectorAll('.hamburger-menu a');
+
+      menuToggle.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle('open');
+      });
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburgerMenu.classList.remove('open');
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

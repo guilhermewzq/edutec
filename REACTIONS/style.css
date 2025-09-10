@@ -1,15 +1,15 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
+html, body {
+  font-family: 'Playfair Display', sans-serif;
   color: #333;
   background-color: #e6e2d0;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -18,113 +18,214 @@ h1, h2, h3, h4 {
   color: #333;
 }
 
+@font-face {
+  font-family: 'JuanaExtraLight';
+  src: url('font/Fontspring-DEMO-juana-extralightit.otf') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 90px 20px 40px;
+  background-color: #E6E2D1;
+  position: relative;
+  z-index: 100;
+}
 
-.logo {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: black;
+.logo img {
+  width: 80px;
+  height: 76px;
+  object-fit: contain;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
   gap: 2rem;
-  margin: 0;
 }
 
 .nav-links a {
-  color: white;
   text-decoration: none;
+  color: #333;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3s;
-  font-size: 0.9rem;
-  padding: 0.5rem 0;
-  border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover {
   color: #ffcc00;
-  border-bottom: 2px solid #ffcc00;
 }
 
 .menu-toggle {
-  font-size: 2rem;
+  display: flex;
+  width: 35px;
+  height: 25px;
   cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 100%;
+  right: 90px;
+  width: 220px;
+  background: rgba(0,0,0,0.95);
+  border-radius: 8px;
+  padding: 10px 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.hamburger-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hamburger-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger-menu li {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.hamburger-menu li:last-child {
+  border-bottom: none;
+}
+
+.hamburger-menu a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
   color: white;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.hamburger-menu a:hover {
+  background: rgba(255,255,255,0.1);
 }
 
 .hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   padding: 60px 20px;
-  text-align: left;
   max-width: 1400px;
   margin: 0 auto;
-  position: relative;
-  border-bottom: 1px solid #333;
 }
 
-.hero-section h1 {
-  font-size: 4rem;
-  font-style: italic;
-  margin-bottom: 10px;
-  color: #444;
-  line-height: 1.2;
-}
-
-.hero-image-container {
-  width: 100%;
-  height: 40rem;
-  overflow: hidden;
-  float: left;
-  
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-section h2 {
-  font-size: 3rem;
-  font-style: italic;
-  margin: 20px 0;
-  color: #444;
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 20px;
-}
-
-.tabela-periodica-placeholder {
-  width: 100%;
-  height: 80px;
+.hero-left-right-container {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 30px;
-  margin-left: 50%;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.tabela-periodica-placeholder div {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #333;
-  margin-left: 10px;
+.hero-left {
+  max-width: 600px;
 }
-/* Seção James Lovelock */
+
+.hero-left h1 {
+  font-family: 'JuanaExtraLight', serif;
+  font-size: 50px;
+  margin-bottom: -15px;
+}
+
+.hero-left .hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.hero-right-title {
+  font-family: 'JuanaExtraLight', serif;
+  font-weight: 280;
+  font-style: normal;
+  font-size: 96px;
+  line-height: 109px;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.squares-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 60px);
+  gap: 0;
+  position: relative;
+  margin-top: 10px;
+}
+
+.squares-grid .square {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 1px solid #333;
+}
+
+.square-top-right {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -60px;
+  left: calc(5 * 60px);
+  background-color: transparent;
+  border: 1px solid #333;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 0;
+  border-top: 1px solid #000;
+  margin: 0 auto;
+}
+
 .section-lovelock {
   display: flex;
   justify-content: space-between;
   padding: 60px 20px;
   max-width: 1400px;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
+}
+
+.lovelock-title {
+    font-family: 'JuanaExtraLight', serif;
+    text-align: left;
 }
 
 .lovelock-text {
+  font-family: 'JuanaExtraLight', serif;
   flex: 1;
-  margin-right: 40px;
+  margin-right: 80px;
+  margin-left: 60px;
+  text-align: left;
+  max-width: 400px;
 }
 
 .lovelock-text h3 {
@@ -150,53 +251,87 @@ h1, h2, h3, h4 {
   display: block;
 }
 
-/* Seção Explanação */
-/* Seção Explanação */
 .section-explainer {
-  display: flex;
-  justify-content: space-between;
   padding: 60px 20px;
   max-width: 1400px;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
 }
 
-.explainer-image {
+.explainer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.explainer-left {
   flex: 1;
-  margin-right: 40px;
-  overflow: hidden;
 }
 
 .space-image {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  max-width: 600px;
+  max-height: 500px;
+  height: auto;
   border-radius: 10px;
+  object-fit: cover;
 }
 
-.explainer-text {
+.explainer-right {
   flex: 1;
-  min-width: 300px; /* Evita que o texto fique muito estreito */
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.explainer-text h3 {
-  font-size: 1.8rem;
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.explainer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
   margin-bottom: 20px;
-  font-style: italic;
 }
 
-.explainer-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  text-align: justify; /* Alinha o texto nas duas margens */
+.explainer-paragraph {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
-/* Tipos de Reações */
+.square-L-vertical {
+  display: grid;
+  grid-template-columns: 50px;
+  grid-template-rows: repeat(5, 50px);
+  position: relative;
+  margin-left: 20px;
+  margin-top: 150px;
+  gap: 0;
+}
+
+.square-L-vertical .square {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #333;
+  background-color: transparent;
+  margin: 0;
+}
+
+.square-L-vertical .square-bottom-left {
+  position: absolute;
+  top: calc(4 * 50px);
+  left: -10px;
+  margin-left: -40px;
+}
+
 .section-types {
-  padding: 60px 20px;
+  padding: 0px 20px;
   max-width: 1400px;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
 }
 
 .types-grid {
@@ -227,24 +362,24 @@ h1, h2, h3, h4 {
   line-height: 1.6;
 }
 
-/* Tipos de Reações Astroquímicas */
 .section-astrochemistry {
   display: flex;
   justify-content: space-between;
-  padding: 60px 20px;
+  align-items: flex-start;
+  padding: 40px 20px;
   max-width: 1400px;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
+  gap: 40px;
 }
 
 .astrochem-text {
   flex: 1;
-  margin-right: 40px;
+  font-family: 'Playfair Display', sans-serif;
 }
 
 .astrochem-text h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
-  font-style: italic;
   margin-bottom: 20px;
 }
 
@@ -255,51 +390,50 @@ h1, h2, h3, h4 {
 
 .astrochem-image {
   flex: 1;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
-.nebula-image {
+.astrochem-image .nebula-image {
   width: 100%;
-  height: 400px;
+  height: auto;
+  border-radius: 10px;
   object-fit: cover;
 }
 
-/* Tipos de Reações (Imagens) */
 .section-reactions-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  justify-content: space-between;
   gap: 30px;
-  padding: 60px 20px;
+  padding: 20px 20px;
   max-width: 1400px;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
+  flex-wrap: wrap;
 }
 
 .reaction-item {
+  flex: 1;
+  min-width: 250px;
   text-align: center;
 }
 
 .reaction-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  height: auto;
 }
 
 .reaction-item h4 {
-  font-size: 1.3rem;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+  font-size: 1.4rem;
   margin-bottom: 10px;
-  text-transform: uppercase;
 }
 
 .reaction-item p {
+  font-family: 'Playfair Display', sans-serif;
+  text-align: left;
   font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Ambientes de Reações */
 .section-environments {
   display: flex;
   justify-content: space-between;
@@ -335,110 +469,24 @@ h1, h2, h3, h4 {
   line-height: 1.8;
 }
 
-/* Botão Voltar para Cima */
 .back-to-top {
   display: block;
   width: 300px;
   margin: 40px auto;
   padding: 15px;
-  background-color: #555;
+  background-color: #4B4845;
   color: white;
-  text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   font-size: 0.9rem;
   border-radius: 4px;
+  cursor: pointer;
   transition: background-color 0.3s;
+  border: none;
+  outline: none;
 }
 
 .back-to-top:hover {
   background-color: #444;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-}
-
-.hamburger-menu {
-  position: absolute;
-  top: 100%;
-  right: 40px;
-  background: rgba(0, 0, 0, 0.9);
-  border-radius: 5px;
-  overflow: hidden;
-  transform: translateY(-20px);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  z-index: 20;
-}
-
-.hamburger-menu.open {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.hamburger-menu ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-}
-
-.hamburger-menu li {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-
-.hamburger-menu li:last-child {
-  border-bottom: none;
-}
-
-.hamburger-menu a {
-  display: block;
-  padding: 15px 25px;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: background 0.2s ease;
-}
-
-.hamburger-menu a:hover {
-  background: rgba(255,255,255,0.1);
-}
-
-
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .nav-links {
-    margin-top: 1rem;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .section-lovelock,
-  .section-explainer,
-  .section-astrochemistry,
-  .section-environments {
-    flex-direction: column;
-  }
-
-  .lovelock-text,
-  .explainer-text,
-  .astrochem-text,
-  .environment-text {
-    margin-right: 0;
-    margin-bottom: 40px;
-  }
-
-  .tabela-periodica-placeholder {
-    display: none;
-  }
-}

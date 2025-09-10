@@ -1,8 +1,10 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 @font-face {
   font-family: 'Juana-extra';
@@ -11,21 +13,27 @@
   font-style: normal;
 }
 
+
+html {
+  font-size: 16px; 
+}
+
 body {
   background-color: #DBD7C5;
-  font-family: 'Juana-extra';
+  font-family: 'Juana-extra', sans-serif;
   font-style: normal;
-  height: 100%;
-  margin: 0;
+  min-height: 100%;
+  line-height: 1.5;
 }
 
 
 .fundo {
   background-color: #1a1a1a;
   color: #f5f5f5;
-  height: 100svh;
+  min-height: 100vh;
   background-image: url(./FOTOS\ NEWS/fundo.png);
   background-size: cover;
+  background-position: center;
 }
 
 header {
@@ -33,15 +41,79 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.menu-toggle span {
+  width: 1.75rem;
+  height: 0.125rem;
+  background: white;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 5.5rem;
+  right: 1.25rem;
+  width: 14rem;
+  background: rgba(0, 0, 0, 0.436);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transform: translateY(-1.25rem);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.hamburger-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hamburger-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger-menu li {
+  border-bottom: 0.0625rem solid rgba(255,255,255,0.2);
+}
+
+.hamburger-menu li:last-child {
+  border-bottom: none;
+}
+
+.hamburger-menu a {
+  display: block;
+  padding: 0.9rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.hamburger-menu a:hover {
+  background: rgba(255,255,255,0.1);
 }
 
 header h1 {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  letter-spacing: 0.05rem;
 }
 
 .logo-image {
-  width: 50px; 
+  width: 3.125rem;
   height: auto;
 }
 
@@ -55,176 +127,184 @@ header h1 {
 
 
 h1.destaque {
-  
   font-style: italic;
   font-weight: normal;
-  font-size: 48px;
+  font-size: clamp(2rem, 5vw, 3rem);
   color: #000;
-  margin-bottom: 5px;
-  border-top-left-radius: 40%;
-  margin: 20px 80px;
-  margin-bottom: -10px;
+  margin: 1.25rem 5%;
+  margin-bottom: -0.6rem;
 }
+
 
 .linha {
   border: none;
-  border-top: 1px solid #555;
-  margin-top: 20px 0;
-  margin: 15px 80px;
-  margin-bottom: 40px;
+  border-top: 0.06rem solid #555;
+  margin: 0.9rem 5% 2.5rem;
 }
 
-.cabeca img{
-  width: 1047px;
-  height: 698px;
-  object-fit: cover;
-  display: block;
-  margin-top: 20px 0;
-  margin: 15px 40px;
-  display: inline-block;
-}
+
 .cabeca3 {
   display: flex;
-  
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+  padding: 0 0.6rem;
 }
-.cabeca p{
+
+.cabeca3 img {
+  flex: 1 1 40rem;
+  width: 100%;
+  max-width: 60rem; 
+  height: auto;
+  object-fit: cover;
+}
+
+.testos {
+  flex: 1 1 18.75rem;
+  min-width: 17.5rem;
+  max-width: 40rem;  
+}
+
+
+.testos h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 32px;
-  line-height: 1.6;
-}
-
-.cabeca h3{
-  position: relative;
   font-weight: normal;
-  font-size: 40px;
-  margin-bottom: 15px;
-
+  font-size: clamp(2rem, 4vw, 3rem); 
+  margin-bottom: 1.5rem; 
 }
 
-.noticias123{
+
+.testos p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem); 
+  line-height: 1.8; 
+  text-align: justify;
+}
+
+
+
+.noticias123 {
   font-family: "Rubik", sans-serif;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 0.3s ease;
-  padding: 0 60px;
-  justify-content: center;   /* centraliza os cards *
-  gap: 10px;                 /* distância entre os cards */
-  padding: 0 60px;           /* distância das bordas laterais */
-  margin: 100px 0;           /* distância em cima e embaixo */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 0 5%;
+  margin: 5rem 0;
 }
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .card {
   background-color: #DBD7C5;
-  padding: 15px;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 7rem;
-  transition: box-shadow 0.3s ease; /* animação suave */
-  margin: 0 20px;
-  transition: all 0.3s ease; /* suaviza sombra e movimento */
-  cursor: pointer; /* mostra que é clicável */
+  padding: 1.5rem; 
+  border-radius: 0.6rem;
+  flex: 1 1 25rem;  
+  max-width: 30rem; 
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+
 .card:hover {
-  box-shadow: 0 8px 16px rgba(124, 103, 77, 0.336); /* sombra escura */
-  transform: translateY(-10px); /* levanta no hover */
+  box-shadow: 0 0.5rem 1rem rgba(124, 103, 77, 0.3);
+  transform: translateY(-0.6rem);
 }
 
 .card:active {
-  transform: translateY(-5px) scale(0.98); /* levemente pressionado */
-  box-shadow: 0 6px 12px rgba(124, 103, 77, 0.226);;
+  transform: translateY(-0.3rem) scale(0.98);
+  box-shadow: 0 0.4rem 0.8rem rgba(124, 103, 77, 0.2);
 }
 
 
 .card img {
-  width: 534px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  justify-content: center;
-  display: flex;
+  margin-bottom: 0.8rem;  
+  border-radius: 0.5rem;
 }
 
+
 .card-title {
-  font-size: 32px;
-  margin-top: 10px;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem); 
   text-transform: uppercase;
   font-weight: 100;
 }
 
+
 .card-description {
   font-family: "Cormorant Garamond", serif;
-  margin-top: 5px;
-  font-size: 30px;
+  margin-top: 0.5rem; 
+  font-size: clamp(1.2rem, 2vw, 1.8rem); 
   font-weight: 100;
 }
 
+
 .card-date {
-  margin-top: 5px;
-  font-size: 0.8rem;
-  color: #555;
+  margin-top: 0.5rem; 
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 33%);
+}
+
+a {
+  color: hsl(0, 0%, 33%);        
+  text-decoration: none;  
 }
 
 .news {
-  height: calc(100svh - 7.9375rem);
+  min-height: calc(100vh - 7.5rem);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.noticia{
-  font-weight: normal;
-  font-size: 128px;
-  border-top-left-radius: 40%;
-  /* margin: 20px 700px; */
+.noticia {
   font-weight: 300;
-  margin-left: 40px 20px;
+  font-size: clamp(3rem, 8vw, 8rem);
 }
-.comentario{
+
+.comentario {
   font-family: "Rubik", sans-serif;
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-size: clamp(1rem, 2vw, 2rem);
+  margin-bottom: 1.9rem;
   font-weight: 100;
   line-height: 1.6;
 }
 
-.autor{
+.autor {
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
   font-weight: 100;
- 
 }
 
-.linha {
-  border: none;
-  border-top: 1px solid #555;
-  margin-top: 20px 0;
-  margin: 15px 80px;
-  margin-bottom: 40px;
-}
 
 .botao-voltar {
   font-family: "Rubik", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3f3c39; /* Cor escura semelhante à imagem */
+  background-color: #3f3c39;
   color: white;
   text-decoration: none;
-  width: 390px;
-  height: 70px;
-  margin: 50px auto;
-  font-size: 18px;
+  width: clamp(12.5rem, 50%, 24.4rem);
+  height: 4.375rem;
+  margin: 3rem auto;
+  font-size: 1.125rem;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border-radius: 0.5rem;
 }
 
 .botao-voltar:hover {
-  background-color: #5a5754;
+  background-color: #5a5653;
 }
-
 

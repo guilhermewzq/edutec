@@ -1,81 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <title>Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./imagens/LOGO.png">
 </head>
 <body>
+  <div class="question">
+    <p id="question">Carregando pergunta...</p>
+  </div>
 
-    <div class="question">
-        <p>QUEM FOI O CIENTISTA <br> RESPONSÁVEL PELA TEORIA DE <br> GAIA, QUE PROPÕE A TERRA COMO <br> UM SISTEMA VIVO?</p>
+  <div class="quiz-container">
+    <div class="top-bar">
+      <span class="contador" id="counter">1/8</span>
     </div>
+
+    <div class="options" id="options"></div>
+
+    <div class="progress">
+      <div class="progress-bar" id="progress-bar" style="width: 10%;"></div>
+    </div>
+
+    <div class="next-btn">
+      <button id="next-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M8.59 16.51L13.41 11.7 8.59 6.89l1.42-1.42L16.5 11.7l-6.49 6.49-1.42-1.42z"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="logo-container">
+      <div class="logo-icons">
+        <a href="../HOME/index.html">
+        <button class="botao-img">
+          <img src="./imagens/LOGO.png" alt="Logo">
+        </button>
+      </a>
+        <button class="menu-img">
+          <img src="./imagens/Menu.png" alt="Menu">
+        </button>
+      </div>
     
-    <div class="quiz-container">
-        
-        <div class="top-bar">
-            
-            <span class="contador">1/8</span>
-        </div>
-
-        
-        
-
-        
-        <div class="options">
-            <button class="option"> <span>a</span> Carl Sagan</button>
-            <button class="option"> <span>b</span> James Lovelock</button>
-            <button class="option"> <span>c</span> Stephen Hawking</button>
-            <button class="option"> <span>d</span> Barry J. Gibb</button>
-        </div>
-
-       
-        <div class="progress">
-            <div class="progress-bar" style="width: 10%;"></div>
-        </div>
-
-       
-        <div class="next-btn">
-            <button>&#8594;</button>
-        </div>
-
-        <div class="logo-container">
-            
-            <button class="botao-img">
-                <img src="LOGO.png" alt="Botão">
-            </button>
-
-            <button class="menu-img">
-                <img src="Menu.png" alt="Botão">
-            </button>
-
-            <hr class="linha">
-        </div>
-
-
-            <nav class="hamburger-menu">
-                <ul class="menu-items">
-                  <li><a href="#noticias">NOTICIAS</a></li>
-                  <li><a href="#elementos">ELEMENTOS</a></li>
-                  <li><a href="#reacoes">REACOES</a></li>
-                  <li><a href="#timeline">TIME-LINE</a></li>
-                  <li><a href="#slides">SLIDES</a></li>
-                  <li><a href="/QUIZ2/index.html">QUIZ</a></li>
-                  <li><a href="#quiz">LOGIN</a></li>
-                  <li><a href="#quiz">CONTEUDOS</a></li>
-                  <li><a href="#quiz">SIGN-UP</a></li>
-                  <li><a href="#quiz">SIGN-IN</a></li>
-                </ul>
-              </nav>
-
-
-            
-       
-        
-
+      <div class="linha"></div>
     </div>
+
+    <!-- Menu que aparece ao clicar -->
+    <nav class="hamburger-menu">
+      <ul class="menu-items">
+        <li><a href="../NEWS/index.html">NOTÍCIAS</a></li>
+          <li><a href="../ELEMENTS/index.html">ELEMENTOS</a></li>
+          <li><a href="../REACTIONS/index.html">REAÇÕES</a></li>
+          <li><a href="../TIMELINE/index.html">TIME-LINE</a></li>
+          <li><a href="../PLANETS/jupiter.html">PLANETAS</a></li>
+          <li><a href="../QUIZ-PAGINA-INICIAL/index.html">QUIZ</a></li>
+          <li><a href="../EXTRAS/index.html">CONTEÚDOS</a></li>
+          <li><a href="../SIGN-UP/index.html">SIGN-UP</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>

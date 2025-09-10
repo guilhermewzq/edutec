@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="planetas.css">
+    <link rel="icon" type="image/png" href="/IMAGENS-GERAIS/LOGO.png">
+    <title>VÊNUS e Suas Reações Químicas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+          <img src="/NEWS/FOTOS NEWS/image.png" alt="">
+           
+        </div>
+        <hr>
+
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+          <div class="hamburger-menu">
+            <ul class="menu-items">
+              <li><a href="../NEWS/index.html">NOTÍCIAS</a></li>
+          <li><a href="../ELEMENTS/index.html">ELEMENTOS</a></li>
+          <li><a href="../REACTIONS/index.html">REAÇÕES</a></li>
+          <li><a href="../TIMELINE/index.html">TIME-LINE</a></li>
+          <li><a href="../PLANETS/jupiter.html">PLANETAS</a></li>
+          <li><a href="../QUIZ-PAGINA-INICIAL/index.html">QUIZ</a></li>
+          <li><a href="../EXTRAS/index.html">HOME</a></li>
+            </ul>
+          </div>
+        </nav>
+        
+
+        <div class="planetas">
+          <div class="planeta-item">
+            <button></button>
+            <a href="./netuno.html">NETUNO</a>
+          </div>
+          <div class="planeta-item">
+            <button></button>
+            <a href="./urano.html">URANO</a>
+          </div>
+          <div class="planeta-item">
+            <button></button>
+            <a href="./saturno.html">SATURNO</a>
+          </div>
+          <div class="planeta-item">
+            <button></button>
+            <a href="./jupiter.html">JÚPITER</a>
+          </div>
+          <div class="planeta-item">
+            <button></button>
+            <a href="./marte.html">MARTE</a>
+          </div>
+          <div class="planeta-item">
+            <button></button>
+            <a href="./terra.html">TERRA</a>
+          </div>
+          <div class="planeta-item active">
+            <button class="active"></button>
+            <a href="./venus.html">VÊNUS</a>
+          </div>
+          <div class="planeta-item">
+            <button></button>
+            <a href="../mercurio.html">MERCÚRIO</a>
+          </div>
+        </div>
+        <div class="content">
+            <h1>Vênus e Suas Reações Químicas</h1>
+            <p>Vênus possui uma atmosfera densa, composta principalmente por CO₂  (96,5%) e N₂ (3,5%), com traços de SO₂ e H₂SO₄. A intensa atividade  vulcânica libera gases que reagem com a radiação solar, formando nuvens  de ácido sulfúrico. A superfície, a ~465 °C, sofre alterações químicas  devido à alta pressão (92 atm) e corrosão por ácidos, oxidando minerais  como pirita e formando sulfatos. O CO₂ aprisiona calor, criando um  efeito estufa irreversível, enquanto o SO₂ reage com o vapor d’água  residual, gerando mais H₂SO₄.</p>
+
+            <div class="rotating-planet">
+                <img src="../imagens/imagensPlanetas/venuszika-Photoroom.png" alt="Planeta Girando" class="venus">
+              </div>
+
+           
+        </div>
+        
+    </div>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const botao = document.getElementById("botao-voltar");
+        
+          botao.addEventListener("click", function () {
+            window.location.href = "tabela.html"; // redireciona para tabela.html
+          });
+        });
+        
+        document.addEventListener("DOMContentLoaded", function() {
+          const menuToggle = document.querySelector('.menu-toggle');
+          const hamburgerMenu = document.querySelector('.hamburger-menu');
+          const menuLinks = document.querySelectorAll('.hamburger-menu a');
+        
+          menuToggle.addEventListener('click', () => {
+            hamburgerMenu.classList.toggle('open');
+          });
+        
+          // Fecha o menu ao clicar em um link
+          menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+              hamburgerMenu.classList.remove('open');
+            });
+          });
+        });
+      
+          </script>
+</body>
+</html>

@@ -4,141 +4,204 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reações no Espaço</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  
 </head>
 <body class="page-reacoes">
-  <!-- Menu -->
+  <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">
-      <img src="../TIMELINE/imagens/LOGO.png" alt="">
-    </div>
-    <nav class="hamburger-menu">
-      <ul class="menu-items">
-        <li><a href="../NEWS/index.html">NOTICIAS</a></li>
-        <li><a href="../ELEMENTS/index.html">ELEMENTOS</a></li>
-        <li><a href="../REACTIONS/index.html">REACOES</a></li>
-        <li><a href="../TIMELINE/index.html">TIME-LINE</a></li>
-        <li><a href="../HOME/index.html">HOME</a></li>
-        <li><a href="../EXTRAS/index.html">EXTRAS</a></li>
-        <li><a href="../PLANETS/mercurio.html">PLANETS</a></li>
-        
-      </ul>
-    </nav>
-    <div class="menu-toggle">
-      <img src="../TIMELINE/imagens/Menu.png" alt="">
-    </div>
-  </nav>
+  <div class="logo">
+    <img src="/ELEMENTS/img/LOGO.png" alt="Logo">
+  </div>
 
+  <div class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+  <div class="hamburger-menu">
+    <ul class="menu-items">
+      <li><a href="../NEWS/index.html">NOTÍCIAS</a></li>
+          <li><a href="../ELEMENTS/index.html">ELEMENTOS</a></li>
+          <li><a href="../REACTIONS/index.html">REAÇÕES</a></li>
+          <li><a href="../TIMELINE/index.html">TIME-LINE</a></li>
+          <li><a href="../PLANETS/jupiter.html">PLANETAS</a></li>
+          <li><a href="../QUIZ-PAGINA-INICIAL/index.html">QUIZ</a></li>
+          <li><a href="../HOME/index.html ">HOME</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
   <section class="hero-section">
-    <h1>Alem da Tabela Periodica:</h1>
-    <div class="hero-image-container">
-      <img src="./reactionsImages/jupiter grande 1.jpg" alt="Planeta com anéis e luas" class="hero-image">
+  <div class="hero-left-right-container">
+    <!-- Lado esquerdo -->
+    <div class="hero-left">
+      <h1>Alem da Tabela Periodica:</h1>
+      <img src="./reactionsImages/jupiter grande 1.jpg" alt="Imagem 1" class="hero-image">
     </div>
-    <h2>Reacoes no Espaco</h2>
-    <div class="tabela-periodica-placeholder"></div>
+
+    <!-- Lado direito -->
+    <div class="hero-right">
+        <br> <br>
+      <h1 class="hero-right-title">Reacoes no Espaco</h2>
+      <br><br>
+      <div class="squares-grid">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square square-top-right"></div>
+      </div>
+      
+    </div>
+  </div>
+  
+</section>
+<div class="horizontal-line"></div> <!-- linha horizontal -->
+
+
+
+<section class="section-lovelock">
+  <div class="lovelock-text">
+    <h3 class="lovelock-title">
+      James Lovelock  O Cientista que Decifrou a Quimica dos Planetas
+    </h3>
+    <p class="lovelock-paragraph">
+      Cientista britânico pioneiro na análise da química atmosférica dos planetas. Trabalhou com a NASA para estudar a atmosfera de Marte e mostrou que a ausência de certos gases indicava falta de vida. Foi um dos primeiros a usar reações químicas como sinal de vida ou não em outros planetas. Também criou a famosa Teoria de Gaia, que vê a Terra como um sistema vivo.
+    </p>
+  </div>
+  <div class="lovelock-image">
+    <img src="./reactionsImages/cientista.jpg" alt="James Lovelock" class="profile-image">
+  </div>
+</section>
+<div class="horizontal-line"></div>
+
+
+<section class="section-explainer">
+  <div class="explainer-container">
+  <div class="explainer-left">
+    <img src="./reactionsImages/fundoPlaneta.jpg" alt="Espaço profundo" class="space-image">
+  </div>
+
+  <div class="explainer-right">
+  <div class="text-content">
+    <h2 class="explainer-title">Como as reacoes acontecem no espaco?</h2>
+    <p class="explainer-paragraph">
+      No espaço, a química acontece em condições extremas: sem gravidade constante, com temperaturas quase congelantes e cercada por radiação intensa.  Mesmo assim, átomos e moléculas conseguem se encontrar, reagir e formar compostos inesperados. É nesse ambiente hostil que nascem desde simples moléculas até estruturas orgânicas complexas — o início de tudo.
+    </p>
+  </div>
+
+  <!-- L de quadrados -->
+  <div class="square-L-vertical">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+     <div class="square square-bottom-left"></div> <!-- pé do L, colado -->
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Blocos temáticos abaixo -->
+<section class="section-types">
+  <div class="types-grid">
+    <div class="type-box">
+      <h4>BAIXA TEMPERATURA</h4>
+      <p>No espaço, a química ocorre em condições extremas: frio intenso, ausência de gravidade constante e muita radiação. Mesmo assim, átomos se unem, formando desde moléculas simples até compostos orgânicos complexos — o começo de tudo.</p>
+    </div>
+    <div class="type-box">
+      <h4>RADIACAO COSMICA</h4>
+      <p>Radiação ultravioleta e outras formas cósmicas atravessam o vácuo e interagem com moléculas, estimulando reações únicas que criam compostos complexos, difíceis de ocorrer em ambientes comuns.</p>
+    </div>
+    <div class="type-box">
+      <h4>POEIRA INTERESTELAR</h4>
+      <p>A poeira espacial serve como superfície para átomos e moléculas se fixarem e reagirem. Essas partículas ajudam a unir elementos, facilitando a formação de novas substâncias químicas.</p>
+    </div>
+    <div class="type-box">
+      <h4>FORMACAO DAS MOLECULAR</h4>
+      <p>Moléculas simples, como água e metano, se combinam nesses processos para formar compostos mais complexos, essenciais para a química dos planetas e possivelmente para a origem da vida.</p>
+    </div>
+  </div>
+</section>
+<div class="horizontal-line"></div>
+
+
+  <section class="section-astrochemistry">
+    <div class="astrochem-text">
+      <h2>Tipos de Reacoes Astroquimicas</h2>
+      <p>No ambiente extremo do espaço, as reações químicas não seguem as mesmas regras que conhecemos na Terra. A combinação de temperaturas próximas ao zero absoluto, radiação cósmica intensa e ausência de pressão atmosférica cria cenários únicos, onde átomos e moléculas se comportam de forma inesperada. Mesmo nessas condições inóspitas, a matéria evolui, interage e forma estruturas que dão origem a compostos complexos — e, possivelmente, aos primeiros blocos da vida.</p>
+    </div>
+    <div class="astrochem-image">
+      <img src="./reactionsImages/terceiraImagem.jpg" alt="Nebulosa estelar" class="nebula-image">
+    </div>
   </section>
+  
 
-    <!-- James Lovelock -->
-    <section class="section-lovelock">
-      <div class="lovelock-text">
-        <h3>James Lovelock O Cientista que Decifrou a Química dos Planetas</h3>
-        <p>Cientista britânico pioneiro na análise da química atmosférica dos planetas. Trabalhou com a NASA para estudar a atmosfera de Marte e mostrou que a ausência de certos gases indicava falta de vida. Foi um dos primeiros a usar reações químicas como sinal de vida ou não em outros planetas. Também criou a famosa Teoria de Gaia, que vê a Terra como um sistema vivo.</p>
-      </div>
-      <div class="lovelock-image">
-        <img src="./reactionsImages/cientista.jpg" alt="James Lovelock" class="profile-image">
-      </div>
-    </section>
+  <section class="section-reactions-images">
+    <div class="reaction-item">
+      <img src="./reactionsImages/ionizção.jpg" alt="Ionização" class="reaction-image">
+      <h4>IONIZAÇÃO</h4>
+      <p>
+        Átomos ou moléculas perdem ou ganham elétrons devido à radiação, formando íons que iniciam novas reações.</p>
+    </div>
+    <div class="reaction-item">
+      <img src="./reactionsImages/dissociação.jpg" alt="Dissociação" class="reaction-image">
+      <h4>DISSOCIAÇÃO</h4>
+      <p>
+        Moléculas são quebradas em pedaços menores pela radiação, gerando fragmentos que podem reagir novamente.</p>
+    </div>
+    <div class="reaction-item">
+      <img src="./reactionsImages/formação.jpg" alt="Formação de cadeias orgânicas" class="reaction-image">
+      <h4>FORMAÇÃO DE CADEIAS ORGÂNICAS</h4>
+      <p>
+        Moléculas simples se unem em sequência, formando estruturas maiores, ligadas à origem da vida.</p>
+    </div>
+  </section>
+  <div class="horizontal-line"></div>
 
-    <!-- Como as reações acontecem no espaço? -->
-    <section class="section-explainer">
-      <div class="explainer-image">
-        <img src="./reactionsImages/fundoPlaneta.jpg" alt="Espaço profundo" class="space-image">
-      </div>
-      <div class="explainer-text">
-        <h3>Como as reações acontecem no espaço?</h3>
-        <p>No espaço, a química acontece em condições extremas: sem gravidade constante, com temperaturas quase congelantes e cercada por radiação intensa. Mesmo assim, átomos e moléculas conseguem se encontrar, reagir e formar compostos inesperados. É nesse ambiente hostil que nascem desde simples moléculas até estruturas orgânicas complexas — o início de tudo.</p>
-      </div>
-    </section>
-
-    <!-- Tipos de Reações -->
-    <section class="section-types">
-      <div class="types-grid">
-        <div class="type-box">
-          <h4>BAIXA TEMPERATURA</h4>
-          <p>No espaço, a química ocorre em condições extremas: frio intenso, ausência de gravidade constante e muita radiação. Mesmo assim, átomos se unem, formando desde moléculas simples até compostos orgânicos complexos — o começo de tudo.</p>
-        </div>
-        <div class="type-box">
-          <h4>RADIAÇÃO COSMICA</h4>
-          <p>Radiação ultravioleta e outras formas cósmicas atravessam o vácuo e interagem com moléculas, estimulando reações únicas que criam compostos complexos, difíceis de ocorrer em ambientes comuns.</p>
-        </div>
-        <div class="type-box">
-          <h4>POEIRA INTERESTELAR</h4>
-          <p>A poeira espacial serve como superfície para átomos e moléculas se fixarem e reagirem. Essas partículas ajudam a unir elementos, facilitando a formação de novas substâncias químicas.</p>
-        </div>
-        <div class="type-box">
-          <h4>FORMAÇÃO DAS MOLECULAR</h4>
-          <p>Moléculas simples, como água e metano, se combinam nesses processos para formar compostos mais complexos, essenciais para a química dos planetas e possivelmente para a origem da vida.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tipos de Reações Astroquímicas -->
-    <section class="section-astrochemistry">
-      <div class="astrochem-text">
-        <h2>Tipos de Reacoes Astroquimicas</h2>
-        <p>No ambiente extremo do espaço, as reações químicas não seguem as mesmas regras que conhecemos na Terra. A combinação de temperaturas próximas ao zero absoluto, radiação cósmica intensa e ausência de pressão atmosférica cria cenários únicos, onde átomos e moléculas se comportam de forma inesperada. Mesmo nessas condições inóspitas, a matéria evolui, interage e forma estruturas que dão origem a compostos complexos — e, possivelmente, aos primeiros blocos da vida.</p>
-        <div class="tabela-periodica-placeholder"></div>
-      </div>
-      <div class="astrochem-image">
-        <img src="./reactionsImages/unsplash_PCGYCkfNgtg.jpg" alt="Nebulosa estelar" class="nebula-image">
-      </div>
-    </section>
-
-    <!-- Tipos de Reações (Imagens) -->
-    <section class="section-reactions-images">
-      <div class="reaction-item">
-        <img src="./reactionsImages/ionizção.jpg" alt="Ionização" class="reaction-image">
-        <h4>IONIZAÇÃO</h4>
-        <p>Átomos ou moléculas perdem ou ganham elétrons devido à radiação, formando íons que iniciam novas reações.</p>
-      </div>
-      <div class="reaction-item">
-        <img src="./reactionsImages/dissociação.jpg" alt="Dissociação" class="reaction-image">
-        <h4>DISSOCIAÇÃO</h4>
-        <p>Moléculas são quebradas em pedaços menores pela radiação, gerando fragmentos que podem reagir novamente.</p>
-      </div>
-      <div class="reaction-item">
-        <img src="./reactionsImages/formação.jpg" alt="Formação de cadeias orgânicas" class="reaction-image">
-        <h4>FORMAÇÃO DE CADEIAS ORGÂNICAS</h4>
-        <p>Moléculas simples se unem em sequência, formando estruturas maiores, ligadas à origem da vida.</p>
-      </div>
-    </section>
-
-    <!-- Ambientes de Reações -->
+  <!-- Ambientes de Reações -->
     <section class="section-environments">
       <div class="environment-image">
         <img src="./reactionsImages/galaxyEspiral.jpg" alt="Galáxia espiral" class="galaxy-image">
       </div>
       <div class="environment-text">
         <h2>AMBIENTES DE REACOES NO ESPACO</h2>
-        <p>Nem toda reação astroquímica ocorre do mesmo jeito — o ambiente em que ela se desenvolve faz toda a diferença. Nas nuvens moleculares, por exemplo, o frio intenso e a presença de poeira criam o cenário ideal para a formação de moléculas. Esses aglomerados escuros, onde a luz das estrelas mal consegue penetrar, funcionam como verdadeiros laboratórios cósmicos.</p>
-        <p>Nas superfícies de minúsculos grãos de poeira interestelar, átomos se encontram e reagem, quase como se estivessem apoiados em bancadas invisíveis espalhadas pelo universo. Já nas regiões onde estrelas estão nascendo, a radiação é intensa, acelerando as reações e permitindo a criação de compostos que não surgiriam em ambientes mais calmos.</p>
-        <p>Curiosamente, até cometas e asteroides — corpos considerados "mortos" — participam do processo. Suas superfícies armazenam moléculas orgânicas que, ao serem expostas à radiação ou ao calor, liberam substâncias que reagem e evoluem. Cada um desses ambientes contribui para um pedaço do quebra-cabeça químico que molda o cosmos.</p>
+        <p>Nem toda reação astroquímica ocorre do mesmo jeito — o ambiente em que ela se desenvolve faz toda a diferença. Nas nuvens moleculares, por exemplo, o frio intenso e a presença de poeira criam o cenário ideal para a formação de moléculas. Esses aglomerados escuros, onde a luz das estrelas mal consegue penetrar, funcionam como verdadeiros laboratórios cósmicos.
+          Nas superfícies de minúsculos grãos de poeira interestelar, átomos se encontram e reagem, quase como se estivessem apoiados em bancadas invisíveis espalhadas pelo universo. Já nas regiões onde estrelas estão nascendo, a radiação é intensa, acelerando as reações e permitindo a criação de compostos que não surgiriam em ambientes mais calmos.
+          Curiosamente, até cometas e asteroides — corpos considerados "mortos" — participam do processo. Suas superfícies armazenam moléculas orgânicas que, ao serem expostas à radiação ou ao calor, liberam substâncias que reagem e evoluem. Cada um desses ambientes contribui para um pedaço do quebra-cabeça químico que molda o cosmos.</p>
       </div>
     </section>
 
     <!-- Voltar para cima -->
     <button class="back-to-top">VOLTAR PARA CIMA</button>
-  </main>
+
   <script>
+
     document.addEventListener("DOMContentLoaded", function() {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const hamburgerMenu = document.querySelector('.hamburger-menu');
-    
-      menuToggle.addEventListener('click', () => {
-        hamburgerMenu.classList.toggle('open');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hamburgerMenu.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!hamburgerMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      hamburgerMenu.classList.remove('open');
+    }document
+  });
+
+      const backToTop = document.querySelector('.back-to-top');
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
       });
     });
-    </script>
+  </script>
 </body>
 </html>

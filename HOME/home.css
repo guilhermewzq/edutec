@@ -1,299 +1,290 @@
-/* Reset básico */
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    color: white;
-    background-color: #000;
-    overflow-x: hidden;
-    background-image: url('fundo-central.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-  }
-  
-  /* Cabeçalho */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-  }
-  
-  .logo {
-    font-size: 48px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-  }
-  
-  .menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 5px;
-  }
-  
-  /* Hero (parte superior) */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'JuanaExtraLight';
+  src: url('./font/Fontspring-DEMO-juana-extralightit.otf') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+body {
+  color: white;
+  font-family: 'Georgia', serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* SEÇÃO 1: HERO (TOPO) */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('./imagens/FUNDO-HOME\ 1.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+/* LOGO */
+.logo {
+position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+
+
+/* LINHA VERTICAL */
+hr {
+  position: absolute;
+  top: 100px;
+  left: 12rem;
+  width: 0.2rem;
+  height: calc(100vh - 140px);
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+  z-index: 5;
+}
+
+/* MENU HAMBURGUER */
+.menu-toggle {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.hamburger-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hamburger-menu ul {
+  list-style: none;
+}
+
+.hamburger-menu li {
+  margin: 15px 0;
+}
+
+.hamburger-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.hamburger-menu a:hover {
+  color: #ffcc00;
+}
+
+/* CONTEÚDO DO HERO */
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-family: 'JuanaExtraLight';
+  font-size: 4rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  font-weight: 100;
+}
+
+.hero-content p:nth-child(2) {
+  font-family: 'JuanaExtraLight';
+  font-size: 1.1rem;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  max-width: 600px;
+}
+
+.scroll-hint {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 60px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* SEÇÃO 2: CONTEÚDO COM FUNDO 2 */
+.content-section {
+  width: 100%;
+  background: url('./imagens/sign-up_LE_upscale_balanced_x4\ 4.jpg') center/cover no-repeat fixed;
+  padding: 80px 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0; /* mantém margem esquerda e direita */
+  text-align: center;
+  position: relative; /* necessário para referência visual */
+}
+.content-wrapper h2 {
+  font-family: 'Rubik';
+  font-size: 2.5rem;
+  margin: 80px 0 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+
+.content-wrapper img {
+  max-width: 100%;
+  height: auto;
+  margin: 60px auto;
+  display: block;
+  justify-content: end;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+
+/* IMAGEM DE SATURNO FIXA NA DIREITA */
+
+
+/* ÍCONE DE ESTRELA */
+.star-icon {
+  width: 40px;
+  height: 40px;
+  margin: 60px auto;
+  background: url('./imagens/star-icon.png') center/contain no-repeat;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 50%;
+}
+
+/* PARÁGRAFOS */
+.content-wrapper p {
+  font-family: 'Arial' ;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* BOTÃO */
+.content-wrapper a {
+  display: inline-block;
+  margin: 80px auto;
+}
+
+.content-wrapper button {
+  background: none;
+  color: white;
+  border: 2px solid white;
+  padding: 2rem 4rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 1px;
+}
+
+.content-wrapper button:hover {
+  background: white;
+  color: black;
+}
+
+
+.lastImage{
+  width: 100%;
+  margin-top: 2rem;
+}
+
+
+
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
   .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-image: url('./HOME/imagens/FUNDO-HOME\ 1.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 0 20px;
-    z-index: 1;
-  }
-  
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
     padding: 20px;
-    text-align: center;
   }
-  
-  .hero h1 {
-    font-size: 4rem;
-    font-style: italic;
-    margin-bottom: 15px;
-    color: #eee;
-    letter-spacing: 1px;
+
+  .logo {
+    top: 20px;
+    left: 20px;
   }
-  
-  .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    font-weight: 500;
-    color: #ddd;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 10px;
+
+  hr {
+    left: 85px;
+    top: 80px;
   }
-  
-  .scroll-indicator {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1rem;
-    color: #ccc;
-    line-height: 2;
+
+  .menu-toggle {
+    top: 20px;
+    right: 20px;
   }
-  
-  .arrow {
-    font-size: 3rem;
-    color: #ccc;
-    animation: bounce 2s infinite;
-  }
-  
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  
-  /* Espaço com elementos */
-  .space-scene {
-    position: relative;
-    min-height: 100vh;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 20px;
-    background-image: url('./HOME/imagens/sign-up_LE_upscale_balanced_x4\ 4.jpg');
-  }
-  
-  /* Imagens fixas */
-  .spaceship {
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    width: 150px;
-    height: auto;
-    z-index: 5;
-    opacity: 0.9;
-  }
-  
-  .saturn {
-    position: absolute;
-    bottom: 20%;
-    right: 5%;
-    width: 200px;
-    height: auto;
-    z-index: 3;
-    opacity: 0.8;
-  }
-  
-  .earth {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 2;
-    max-height: 400px;
-    object-fit: cover;
-  }
-  
-  /* Texto principal */
-  .text-block {
-    text-align: center;
-    margin: 80px 0;
-    max-width: 800px;
-    padding: 20px;
-    z-index: 10;
-  }
-  
-  .text-block h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: #ddd;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1.6;
-  }
-  
-  .content-section {
-    text-align: center;
-    max-width: 700px;
-    margin: 100px auto;
-    padding: 20px;
-    z-index: 10;
-    position: relative;
-  }
-  
-  .icon {
+
+  .hero-content h1 {
     font-size: 2.5rem;
-    margin: 20px auto;
-    color: #fff;
-  }
-  
-  .content-section p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #ddd;
-    margin: 20px 0;
-    text-align: center;
-  }
-  
-  /* Botão final */
-  .sistema-solar-btn {
-    margin-top: 60px;
-    padding: 20px 50px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    border: 2px solid #fff;
-    background: transparent;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .sistema-solar-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    margin: 120px 0 20px;
   }
 
-  .solar-system-container {
-    text-align: center;
-    margin-top: 80px;
-    padding: 20px;
+  .content-wrapper h2 {
+    font-size: 2rem;
+    margin: 60px 0 40px;
   }
-  
-  .solar-system-btn {
-    display: inline-block;
-    padding: 16px 40px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: white;
-    background: transparent;
-    border: 2px solid white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    position: relative;
-  }
-  
-  .solar-system-btn:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  }
-  
-  .solar-system-btn:active {
-    transform: translateY(0);
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-  
-    .spaceship {
-      width: 100px;
-      top: 15%;
-      left: 30%;
-    }
-  
-    .saturn {
-      width: 150px;
-      bottom: 15%;
-      right: 10%;
-    }
-  
-    .earth {
-      max-height: 300px;
-    }
-  
-    .text-block h2 {
-      font-size: 1.5rem;
-    }
-  
-    .content-section p {
-      font-size: 1rem;
-    }
 
-    .solar-system-btn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      margin: 0;
-    }
-
-    
+  .content-wrapper p {
+    font-size: 1rem;
   }
+
+  .content-wrapper button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
