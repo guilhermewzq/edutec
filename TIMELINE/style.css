@@ -78,7 +78,7 @@
   .menu-toggle span {
     display: block;
     height: 4px;
-    background: #fff;
+    
     border-radius: 2px;
     transition: 0.3s;
   }
