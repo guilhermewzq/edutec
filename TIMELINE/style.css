@@ -78,7 +78,7 @@
   .menu-toggle span {
     display: block;
     height: 4px;
-    background: #ffffff;
+    background: #fff;
     border-radius: 2px;
     transition: 0.3s;
   }
@@ -88,7 +88,7 @@
     top: 100%;
     right: 90px;
     width: 220px;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0, 0, 0, 0.95);
     border-radius: 8px;
     padding: 10px 0;
     opacity: 0;
@@ -111,7 +111,7 @@
   }
   
   .hamburger-menu li {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   .hamburger-menu li:last-child {
@@ -128,7 +128,7 @@
   }
   
   .hamburger-menu a:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
   }
   
   .hero-main-title {

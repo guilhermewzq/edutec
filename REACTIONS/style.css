@@ -80,7 +80,7 @@ h1, h2, h3, h4 {
 .hamburger-menu {
   position: absolute;
   top: 100%;
-  right: 90px;
+  right: 50px;
   width: 220px;
   background: rgba(0,0,0,0.95);
   border-radius: 8px;

@@ -56,43 +56,41 @@ hr {
   z-index: 5;
 }
 
-/* MENU HAMBURGUER */
+
 .menu-toggle {
   position: absolute;
-  margin-top: 2rem;
-  margin-right: 2rem;
   top: 60px;
   right: 50px;
-  width: 40px;
-  height: 30px;
   display: flex;
+  width: 35px;
+  height: 25px;
+  cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
-  z-index: 99;
+  z-index: 999;
 }
 
 .menu-toggle span {
   display: block;
-  width: 100%;
-  height: 3px;
-  background-color: white;
+  height: 4px;
+  background: white; 
+  border-radius: 2px;
   transition: 0.3s;
 }
 
 .hamburger-menu {
   position: absolute;
-  top: 80px;
-  right: 40px;
-  width: 200px;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
-  padding: 20px;
-  transform: translateY(-10px);
+  top: 100px;
+  right: 50px; 
+  width: 220px;
+  background: rgba(0,0,0,0.95);
+  border-radius: 8px;
+  padding: 10px 0;
   opacity: 0;
   pointer-events: none;
+  transform: translateY(-20px);
   transition: all 0.3s ease;
-  z-index: 20;
+  z-index: 999;
 }
 
 .hamburger-menu.open {
@@ -103,22 +101,33 @@ hr {
 
 .hamburger-menu ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .hamburger-menu li {
-  margin: 15px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  margin: 0;
+}
+
+.hamburger-menu li:last-child {
+  border-bottom: none;
 }
 
 .hamburger-menu a {
+  display: block;
+  padding: 15px 20px;
   text-decoration: none;
   color: white;
-  font-size: 1rem;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: background 0.2s;
+  font-size: 1rem;
 }
 
 .hamburger-menu a:hover {
-  color: #ffcc00;
+  background: rgba(255,255,255,0.1);
 }
 
 /* CONTEÚDO DO HERO */
