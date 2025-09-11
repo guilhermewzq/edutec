@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'JuanaExtraLight';
-  src: url('./font/Fontspring-DEMO-juana-extralightit.otf') format('woff2');
+  src: url('./HOME/font/Fontspring-DEMO-juana-extralightit.otf') format('woff2');
   font-weight: normal;
   font-style: italic;
 }
@@ -25,7 +25,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('./imagens/FUNDO-HOME\ 1.jpg') center/cover no-repeat;
+  background: url('./HOME/imagens/FUNDO-HOME\ 1.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +38,7 @@ body {
 .logo {
 position: absolute;
   top: 40px;
-  left: 40px;
+  left: 2rem;
 }
 
 
@@ -47,9 +47,9 @@ position: absolute;
 hr {
   position: absolute;
   top: 100px;
-  left: 12rem;
+  left: 8rem;
   width: 0.2rem;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 100px);
   border: none;
   background-color: rgba(255, 255, 255, 0.3);
   margin: 0;
@@ -59,15 +59,17 @@ hr {
 /* MENU HAMBURGUER */
 .menu-toggle {
   position: absolute;
-  top: 40px;
-  right: 40px;
-  width: 30px;
-  height: 20px;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  top: 60px;
+  right: 50px;
+  width: 40px;
+  height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  z-index: 10;
+  z-index: 99;
 }
 
 .menu-toggle span {
@@ -121,13 +123,13 @@ hr {
 
 /* CONTEÚDO DO HERO */
 .hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 120rem;
+  margin-top: 20rem;
   z-index: 1;
 }
 
 .hero-content h1 {
-  font-family: 'JuanaExtraLight';
+  font-family: 'JuanaExtraLight', sans-serif;
   font-size: 4rem;
   letter-spacing: 1px;
   margin-bottom: 20px;
@@ -136,7 +138,8 @@ hr {
 }
 
 .hero-content p:nth-child(2) {
-  font-family: 'JuanaExtraLight';
+  font-family: 'Inter';
+  text-transform: uppercase;
   font-size: 1.1rem;
   margin: 0 auto;
   padding-bottom: 15px;
@@ -157,95 +160,6 @@ hr {
   40% { transform: translateY(-10px); }
   60% { transform: translateY(-5px); }
 }
-
-/* SEÇÃO 2: CONTEÚDO COM FUNDO 2 */
-.content-section {
-  width: 100%;
-  background: url('./imagens/sign-up_LE_upscale_balanced_x4\ 4.jpg') center/cover no-repeat fixed;
-  padding: 80px 0;
-  position: relative;
-  min-height: 100vh;
-}
-
-.content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0; /* mantém margem esquerda e direita */
-  text-align: center;
-  position: relative; /* necessário para referência visual */
-}
-.content-wrapper h2 {
-  font-family: 'Rubik';
-  font-size: 2.5rem;
-  margin: 80px 0 60px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  text-shadow: 0 0 8px rgba(0,0,0,0.7);
-}
-
-.content-wrapper img {
-  max-width: 100%;
-  height: auto;
-  margin: 60px auto;
-  display: block;
-  justify-content: end;
-  filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
-}
-
-/* IMAGEM DE SATURNO FIXA NA DIREITA */
-
-
-/* ÍCONE DE ESTRELA */
-.star-icon {
-  width: 40px;
-  height: 40px;
-  margin: 60px auto;
-  background: url('./imagens/star-icon.png') center/contain no-repeat;
-  background-color: rgba(0,0,0,0.8);
-  border-radius: 50%;
-}
-
-/* PARÁGRAFOS */
-.content-wrapper p {
-  font-family: 'Arial' ;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-/* BOTÃO */
-.content-wrapper a {
-  display: inline-block;
-  margin: 80px auto;
-}
-
-.content-wrapper button {
-  background: none;
-  color: white;
-  border: 2px solid white;
-  padding: 2rem 4rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-  letter-spacing: 1px;
-}
-
-.content-wrapper button:hover {
-  background: white;
-  color: black;
-}
-
-
-.lastImage{
-  width: 100%;
-  margin-top: 2rem;
-}
-
-
 
 
 /* RESPONSIVO */

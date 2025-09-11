@@ -18,6 +18,13 @@ body {
   z-index: 1;
 }
 
+@font-face {
+  font-family: 'JuanaExtraLight';
+  src: url('./font/Fontspring-DEMO-juana-extralightit.otf') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
 body::before {
   content: "";
   position: absolute;
@@ -29,12 +36,6 @@ body::before {
   z-index: -1;
 }
 
-@font-face {
-  font-family: 'Juana-extra';
-  src: url('./font/Fontspring-DEMO-juana-extralightit.otf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
 
 .logo-container {
   position: absolute;
@@ -89,7 +90,8 @@ body::before {
   text-align: center;
 }
 
-.container h1 {
+.container h1 { 
+  font-family: 'JuanaExtra';
   font-size: 7.6rem;
   font-style: italic;
   font-weight: 100; 
